@@ -1,0 +1,7 @@
+{
+  "name": "perguntasPipocka",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
