@@ -1,0 +1,19 @@
+<ion-content>
+
+<p>
+  {{ questaoAtual.title }}
+</p>
+
+<div (click)="biblicas()" *ngFor="let answer of questaoAtual">
+  <span>
+    {{ perguntasBiblicas.respostas}}
+  </span>
+</div>
+
+
+
+<ion-button color="warning" class="botoes" (click)="proximaQuestao()">Questão Anterior</ion-button>
+<ion-button color="success" class="botoes" (click)="proximaQuestao()">Próxima Questão</ion-button>
+<ion-button color="danger" id="voltar" (click)="voltar()">Voltar</ion-button>
+
+</ion-content>

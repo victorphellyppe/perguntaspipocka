@@ -1,0 +1,36 @@
+<!-- Author: Victor Phellyppe -->
+<ion-content>
+  <div class="content-page">
+    <div class="question-box">
+      <div class="question">
+      <p>{{ curQuestion.title }}</p>
+      </div><!-- DIV QUESTION -->
+    </div><!-- DIV QUESTION BOX-->
+    <div class="answers">
+      <div class="answer" (click)="doAnswer(answer)" *ngFor=" let answer of curQuestion.answers; let n = index">
+        <span class="number">{{ n + 1}}</span>
+        <span class="answer-text">{{ answer.description }}</span>
+      </div><!--DIV ANSWER-->
+      <div class="info">
+        <div (click)="doPulo()">
+          <ion-button color="danger" [disabled]="desabilitado">
+            <img id="pule1" src="/assets/img/pule1.png">
+          </ion-button>
+          <p>PULE 1</p>
+        </div><!--DIV doPulo-->
+
+        <div (click)="doTwoPulo()">
+          <ion-button color="success" [disabled]="desabilitado2">
+            <p><img id="pule2" src="/assets/img/pule2.png"></p>
+          </ion-button>
+          <p>PULE 2</p>
+        </div><!--DIV doTWOPulo-->
+
+        <div (click)="pararAlertConfirm()">
+          <p> <img src="../../../assets/img/parar.png"></p>
+          <p>PARAR</p>
+        </div><!--DIV Pararalertconfig-->
+      </div><!--DIV INFO-->
+    </div><!--DIV ANSWERS-->
+  </div> <!-- DIV CONTENT PAGE-->
+</ion-content>
